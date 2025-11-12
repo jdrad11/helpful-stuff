@@ -30,14 +30,20 @@ sudo deluser <username> <group>
 create file in format <username>:<new_password>
 sudo chpasswd < usersfile.txt
 
+change PASS_MIN_DAYS in /etc/login.defs to prevent attackers changing our passwords back without root access
+
 # PAM UBUNTU
 
-# check password policy in /etc/pam.d/common-password
+check password policy in /etc/pam.d/common-password
 
 install with --> sudo apt install libpam-pwquality -y OR 
 should be --> password  requisite   pam_pwquality.so retry=3 minlen=12 maxrepeat=3 ucredit=-1 lcredit=-1 dcredit=-1 ocredit=-1 difok=3 reject_username enforce_for_root
 
 # PAM FEDORA
 
-# check password policy in /etc/pam.d/system-auth --> change values then run `sudo authselect apply-changes`
+check password policy in /etc/pam.d/system-auth --> change values then run `sudo authselect apply-changes`
+
+# SEARCH FOR PROHIBITED FILES AND TOOLS
+
+use cypat lol
 
