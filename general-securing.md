@@ -45,5 +45,7 @@ check password policy in /etc/pam.d/system-auth --> change values then run `sudo
 
 # SEARCH FOR PROHIBITED FILES AND TOOLS
 
+ubuntu --> sudo apt-mark showmanual
+fedora --> sudo dnf repoquery --userinstalled
 use cypat lol
 
